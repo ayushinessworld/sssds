@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+<head>
+<meta charset=UTF-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>RoutineFlow Tracker</title>
+<script src=https://cdn.tailwindcss.com></script>
+</head>
+
+<body class=bg-gray-50 style="font-family:Arial">
+
+<nav class="bg-white shadow fixed w-full top-0 z-50">
+<div class="max-w-6xl mx-auto px-4 flex justify-between py-3">
+<div class=flex>
+<div class="w-9 h-9 bg-blue-500 rounded-full flex items-center justify-center">
+<span class=text-white>R</span>
+</div>
+<span class="text-xl ml-2 font-bold">RoutineFlow</span>
+</div>
+<div class="hidden md:flex gap-6">
+<a href=#home class=text-gray-700>Home</a>
+<a href=#tracker class=text-gray-700>Tracker</a>
+<a href=#faq class=text-gray-700>FAQ</a>
+</div>
+<button id=hamburger class=md:hidden>
+<div class="w-5 h-0.5 bg-gray-600 my-1"></div>
+<div class="w-5 h-0.5 bg-gray-600 my-1"></div>
+<div class="w-5 h-0.5 bg-gray-600 my-1"></div>
+</button>
+</div>
+<div id=mobile-menu class="hidden md:hidden bg-white border-t px-4 py-2">
+<a href=#home class="block py-2">Home</a>
+<a href=#tracker class="block py-2">Tracker</a>
+<a href=#faq class="block py-2">FAQ</a>
+</div>
+</nav>
+
+<section id=home class="pt-20 pb-12 bg-gradient-to-r from-blue-50 to-indigo-100">
+<div class="max-w-3xl mx-auto px-4">
+<img src=https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=400&q=80 alt=Routine class="w-40 h-28 mx-auto rounded shadow mb-4">
+<h1 class="text-3xl md:text-4xl font-bold mb-4">Track Your Perfect Day</h1>
+<p class="text-lg text-gray-600 mb-6">Build better habits with our visual timeline tracker</p>
+<button class="bg-blue-500 text-white px-6 py-2 rounded-full">Start Now</button>
+</div>
+</section>
+
+<section id=tracker class="py-12 bg-white">
+<div class="max-w-3xl mx-auto px-4">
+<h2 class="text-2xl font-bold mb-6 text-center">Daily Timeline</h2>
+<div class="bg-gray-50 rounded shadow p-4">
+<div class=flex justify-between mb-4>
+<h3 class=font-bold>Today</h3>
+<div>
+<button id=add-task class="bg-blue-500 text-white px-3 py-1 rounded mr-2">Add</button>
+<button id=clear-all class="bg-red-500 text-white px-3 py-1 rounded">Clear</button>
+</div>
+</div>
+
+<div id=task-form class="hidden mb-4 p-3 bg-white rounded">
+<div class=grid gap-3>
+<input type=text id=task-name placeholder="Task" class="p-2 border rounded">
+<input type=time id=task-time class="p-2 border rounded">
+<button id=save-task class="bg-green-500 text-white p-2 rounded">Save</button>
+</div>
+</div>
+
+<div id=timeline class=space-y-3>
+<div class="flex p-3 bg-green-50 border-l-4 border-green-400">
+<div class="w-2 h-2 bg-green-400 rounded-full mt-2 mr-3"></div>
+<div class=flex-1>
+<div class=flex justify-between>
+<span class=font-semibold>Morning Meditation</span>
+<span class=text-sm>7:00 AM</span>
+</div>
+<p class=text-sm>Start with mindfulness</p>
+</div>
+<span class=text-green-500>✓ Done</span>
+</div>
+
+<div class="flex p-3 bg-yellow-50 border-l-4 border-yellow-400">
+<div class="w-2 h-2 bg-yellow-400 rounded-full mt-2 mr-3"></div>
+<div class=flex-1>
+<div class=flex justify-between>
+<span class=font-semibold>Exercise</span>
+<span class=text-sm>8:30 AM</span>
+</div>
+<p class=text-sm>30 minutes cardio</p>
+</div>
+<span class=text-yellow-500>In Progress</span>
+</div>
+</div>
+
+<div class="mt-4 p-3 bg-blue-50 rounded">
+<div class=flex justify-between>
+<p class=text-blue-800>Progress</p>
+<p class=text-blue-600>33%</p>
+</div>
+<div class="mt-2 bg-blue-200 h-2 rounded">
+<div class="bg-blue-500 h-2 rounded" style=width:33%></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id=faq class="py-12 bg-gray-50">
+<div class="max-w-3xl mx-auto px-4">
+<h2 class="text-2xl font-bold mb-6 text-center">FAQ</h2>
+<div class=space-y-3>
+<div class=bg-white border rounded>
+<button class="faq-btn w-full p-4 flex justify-between">
+<span class=font-semibold>How to start?</span>
+<span>+</span>
+</button>
+<div class="faq-content hidden p-4 pt-0">
+<p>Click Add Task, enter activity and time, then save it.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<footer class="bg-gray-800 text-white py-8">
+<div class="max-w-3xl mx-auto px-4 text-center">
+<img src=https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&q=80 alt=Success class="w-24 h-20 mx-auto rounded mb-4">
+<h2 class="text-xl font-bold mb-3">Transform Your Days</h2>
+<button class="bg-blue-500 text-white px-6 py-2 rounded-full mb-4">Get Started</button>
+<div class="pt-4 border-t border-gray-700">
+<p class=text-gray-400>© 2024 RoutineFlow</p>
+</div>
+</div>
+</footer>
+
+<script>
+const hamburger=document.getElementById('hamburger');
+const mobileMenu=document.getElementById('mobile-menu');
+hamburger.onclick=()=>mobileMenu.classList.toggle('hidden');
+
+document.querySelectorAll('.faq-btn').forEach(btn=>{
+btn.onclick=()=>{
+const content=btn.nextElementSibling;
+content.classList.toggle('hidden');
+btn.querySelector('span').textContent=content.classList.contains('hidden')?'+':'−';
+};
+});
+
+const addTaskBtn=document.getElementById('add-task');
+const taskForm=document.getElementById('task-form');
+addTaskBtn.onclick=()=>taskForm.classList.toggle('hidden');
+
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+a.onclick=e=>{
+e.preventDefault();
+document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+mobileMenu.classList.add('hidden');
+};
+});
+</script>
+
+</body>
+</html>
